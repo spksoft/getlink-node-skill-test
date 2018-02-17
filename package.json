@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "node ./src/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -17,8 +18,13 @@
   },
   "homepage": "https://github.com/spksoft/getlink-node-skill-test#readme",
   "dependencies": {
+    "axios": "^0.17.1",
     "body-parser": "^1.18.2",
+    "compression": "^1.7.1",
+    "ejs": "^2.5.7",
     "express": "^4.16.2",
-    "pug": "^2.0.0-rc.4"
+    "express-form-data": "^2.0.1",
+    "helmet": "^3.11.0",
+    "morgan": "^1.9.0"
   }
 }
