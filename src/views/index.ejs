@@ -1,6 +1,30 @@
 <html>
-  <head><title>Git Follower - <%= gitID %></title></head>
+  <head>
+    <title>Git Follower - <%= gitID %></title>
+    <style>
+      table, th, td {
+          border: 1px solid black;
+      }
+    </style>
+  </head>
   <body>
-    <%= JSON.stringify(followerData) %>
+    <form action="/" method="POST">
+      <input type="text" name="gitID" placeholder="spksoft">
+      <input type="submit" value="Submit">
+    </form>
+    <table style="width:100%">
+      <tr>
+        <th>Avatar</th>
+        <th>Login</th> 
+        <th>Url</th>
+      </tr>
+      <% for(var i=0; i<followerData.length; i++) {%>
+        <tr>
+          <td><img width="50px" height="50px" src="<%= followerData[i].avatar_url %>" /></td>
+          <td><%= followerData[i].login %></td> 
+          <td><%= followerData[i].url %></td>
+        </tr>
+      <% } %>
+    </table>
   </body>
 </html>
